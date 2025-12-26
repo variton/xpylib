@@ -1,0 +1,14 @@
+#vim extensions
+*.swp
+*.swo
+*.swn
+
+#python extensions
+*.pyc
+
+#folders to ignore
+__pycache__/
+
+#files to ignore
+.coverage
+coverage.json
