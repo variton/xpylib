@@ -1,0 +1,17 @@
+[project]
+name = "xpylib"
+version = "0.1.0"
+description = "X python high level packages"
+requires-python = ">=3.12"
+
+# dependencies needed by the ci
+dependencies = ["black",
+      "pycodestyle",
+      "pydocstyle",
+      "pytest",
+      "pytest-asyncio",
+      "coverage"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

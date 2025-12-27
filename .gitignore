@@ -8,6 +8,7 @@
 
 #folders to ignore
 __pycache__/
+xpylib.egg-info/
 
 #files to ignore
 .coverage
