@@ -41,6 +41,19 @@ pytest tests
 
 ```
 
+### Generate the test report
+*remark:*
+    *make sure to use the ixpylib docker image*
+
+Execute the following cli:
+
+```
+pytest --html=report.html --self-contained-html
+
+```
+This will generate a report.html file in the root folder
+
+
 ### Run the test coverage
 *remark:*
     *make sure to use the ixpylib docker image*
