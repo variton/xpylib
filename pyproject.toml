@@ -10,6 +10,7 @@ dependencies = ["black",
       "pydocstyle",
       "pytest",
       "pytest-asyncio",
+      "pytest-html",
       "coverage"]
 
 [build-system]

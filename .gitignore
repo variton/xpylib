@@ -13,3 +13,4 @@ xpylib.egg-info/
 #files to ignore
 .coverage
 coverage.json
+report.html
