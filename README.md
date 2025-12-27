@@ -54,7 +54,7 @@ pytest --html=report.html --self-contained-html
 This will generate a report.html file in the root folder
 
 
-### Run the test coverage
+### Run the test coverage on a module
 *remark:*
     *make sure to use the ixpylib docker image*
 
@@ -73,7 +73,7 @@ coverage run -m pytest tests/<target>
 Execute the following cli:
 
 ```
-./ci.sh
+./local-ci.sh
 
 ```
 

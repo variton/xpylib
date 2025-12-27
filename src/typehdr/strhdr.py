@@ -11,7 +11,7 @@ class StrHdr:
 
     @staticmethod
     def detect_embedded_str(_s: str) -> bool:
-        """
+        r"""
         Detect whether a string is enclosed in matching quotation marks.
 
         A string is considered an *embedded string* if **all** of the following
@@ -54,7 +54,7 @@ class StrHdr:
         - Nested or mixed quotation marks are not supported.
         """
         QUOTES = ['"', "'"]
-        if isinstance(_s,str) and len(_s) != 0:
+        if isinstance(_s, str) and len(_s) != 0:
             for quote in QUOTES:
                 if _s.count(quote) == 2:
                     return True
