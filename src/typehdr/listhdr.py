@@ -4,7 +4,7 @@
 class ListHdr:
     """
     Utility class for performing header-like transformations on lists of strs.
-    
+
     This class is designed as a namespace for static methods and is not
     intended to be instantiated.
     """
