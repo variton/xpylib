@@ -11,6 +11,7 @@ dependencies = ["black",
       "pytest",
       "pytest-asyncio",
       "pytest-html",
+      "ruff",
       "coverage"]
 
 [build-system]
