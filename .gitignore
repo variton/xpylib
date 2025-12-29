@@ -13,5 +13,7 @@ xpylib.egg-info/
 #files to ignore
 .coverage
 coverage.json
+bandit.json
+bandit-report.html
 report.html
 htmlcov/
