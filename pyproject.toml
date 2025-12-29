@@ -13,6 +13,8 @@ dependencies = ["black",
       "pytest-html",
       "ruff",
       "bandit",
+      "sphinx",
+      "furo",
       "coverage"]
 
 [build-system]

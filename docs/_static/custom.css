@@ -1,0 +1,41 @@
+/* Add spacing above class methods/attributes */
+dl.class > dt,
+dl.method > dt,
+dl.function > dt {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+/* Add spacing between sections */
+.section {
+    margin-bottom: 2em;
+}
+
+/* Slightly increase line height for better readability */
+body {
+    line-height: 2.5;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+/* Optional: Space out descriptions for readability */
+dl dd {
+    margin-bottom: 1rem;
+}
+
+/* Optional: Increase spacing between classes */
+dl.class {
+    margin-bottom: 3rem;
+}
+
+/* Sidebar section titles (from :caption:) */
+.caption {
+    color: #4CAF50;  /* green, for example */
+    font-weight: bold;
+}
+
+.sidebar-brand {
+    color: #4CAF50;
+    font-weight: bold;
+}
