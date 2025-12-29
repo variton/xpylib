@@ -9,6 +9,9 @@
 #folders to ignore
 __pycache__/
 xpylib.egg-info/
+htmlcov/
+docs/_build
+!docs/_build/
 
 #files to ignore
 .coverage
@@ -16,4 +19,3 @@ coverage.json
 bandit.json
 bandit-report.html
 report.html
-htmlcov/
