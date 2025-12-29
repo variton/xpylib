@@ -52,7 +52,6 @@ class ListHdr:
         >>> ListHdr.mutate([], lambda s: True)
         []
         """
-
         if len(_data) == 0:
             return _data
 
