@@ -10,8 +10,7 @@
 __pycache__/
 xpylib.egg-info/
 htmlcov/
-docs/_build
-!docs/_build/
+docs/_build/
 
 #files to ignore
 .coverage
