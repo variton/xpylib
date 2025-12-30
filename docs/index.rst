@@ -3,12 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-xpylib documentation
-====================
-
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
+Xpylib [X python libraries]
+===========================
+Bundle of high level python packages
 
 .. image:: _static/xpylib.jpeg
    :alt: Project logo
