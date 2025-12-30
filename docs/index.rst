@@ -10,6 +10,10 @@ Add your content using ``reStructuredText`` syntax. See the
 `reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
 documentation for details.
 
+.. image:: _static/xpylib.jpeg
+   :alt: Project logo
+   :align: center
+   :width: 90%
 
 .. toctree::
    :maxdepth: 2
