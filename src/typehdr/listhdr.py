@@ -7,6 +7,14 @@ class ListHdr:
 
     This class is designed as a namespace for static methods and is not
     intended to be instantiated.
+
+    **Examples: mutate**
+
+    >>> ListHdr.mutate(["[abc]", "def"], lambda s: s.startswith("["))
+    ['abc', 'def']
+
+    >>> ListHdr.mutate([], lambda s: True)
+    []
     """
 
     @staticmethod
@@ -37,20 +45,12 @@ class ListHdr:
             A new list of strings where elements satisfying the predicate
             have had their first and last characters removed.
 
-        Notes
-        -----
+        **Notes**
+
         - No validation is performed on string length. If the predicate
           returns True for strings shorter than two characters, the result
           will be an empty string.
         - The predicate is assumed to be side-effect free.
-
-        Examples
-        --------
-        >>> ListHdr.mutate(["[abc]", "def"], lambda s: s.startswith("["))
-        ['abc', 'def']
-
-        >>> ListHdr.mutate([], lambda s: True)
-        []
         """
         if len(_data) == 0:
             return _data
