@@ -6,3 +6,4 @@ Packages
 
    fio
    typehdr
+   config
