@@ -7,6 +7,25 @@ class StrHdr:
 
     This class provides helper methods for inspecting and classifying
     string values based on their formatting.
+
+    **Examples: detect_embedded_str**
+
+    .. code-block:: python
+
+        StrHdr.detect_embedded_str('"hello"')
+        # True
+
+        StrHdr.detect_embedded_str("'world'")
+        # True
+
+        StrHdr.detect_embedded_str("hello")
+        # False
+
+        StrHdr.detect_embedded_str("")
+        # False
+
+        StrHdr.detect_embedded_str('"mismatch\'')
+        # False
     """
 
     @staticmethod
@@ -28,24 +47,6 @@ class StrHdr:
                  otherwise ``False``.
         :rtype: bool
 
-        **Examples**
-
-        .. code-block:: python
-
-            StrHdr.detect_embedded_str('"hello"')
-            # True
-
-            StrHdr.detect_embedded_str("'world'")
-            # True
-
-            StrHdr.detect_embedded_str("hello")
-            # False
-
-            StrHdr.detect_embedded_str("")
-            # False
-
-            StrHdr.detect_embedded_str('"mismatch\'')
-            # False
 
         **Notes**
 
