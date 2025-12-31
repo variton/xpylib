@@ -2,7 +2,7 @@
 
 
 class StrHdr:
-    """
+    r"""
     String header utility helpers.
 
     This class provides helper methods for inspecting and classifying
