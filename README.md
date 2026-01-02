@@ -84,7 +84,7 @@ Execute the following cli:
 Execute the following cli:
 
 ```
-todo
-this will use sphinx
+cd docs
+make clean; make html
 
 ```
