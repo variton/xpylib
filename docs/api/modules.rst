@@ -7,3 +7,4 @@ Packages
    fio
    typehdr
    config
+   metric
