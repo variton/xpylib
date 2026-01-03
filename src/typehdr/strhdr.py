@@ -61,3 +61,41 @@ class StrHdr:
                     return True
             return False
         return False
+
+    @staticmethod
+    def str_to_list(_s: str) -> list[str]:
+        r"""
+        Convert a whitespace-separated string into a list of strings.
+
+        This method splits the input string on any whitespace and returns
+        a list containing each resulting substring. Consecutive whitespace
+        characters are treated as a single separator.
+
+        :param _s: Input string to be split.
+        :type _s: str
+        :return: A list of substrings extracted from the input string.
+        :rtype: list[str]
+
+        **Examples**
+
+        Basic usage:
+
+        >>> StrHdr.str_to_list("hello world")
+        ['hello', 'world']
+
+        Multiple spaces and tabs are handled automatically:
+
+        >>> StrHdr.str_to_list("one   two\\tthree")
+        ['one', 'two', 'three']
+
+        Leading and trailing whitespace is ignored:
+
+        >>> StrHdr.str_to_list("  spaced words  ")
+        ['spaced', 'words']
+
+        Empty string returns an empty list:
+
+        >>> StrHdr.str_to_list("")
+        []
+        """
+        return _s.split()
