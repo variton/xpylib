@@ -1,7 +1,7 @@
-jsonhdr module
+jsonmgr module
 ==============
 
-.. automodule:: fio.jsonhdr
+.. automodule:: fio.jsonmgr
    :members:
    :show-inheritance:
    :undoc-members:

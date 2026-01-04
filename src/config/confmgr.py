@@ -1,6 +1,6 @@
 """confmgr module."""
 
-from fio.jsonhdr import JsonHdr
+from fio.jsonmgr import JsonMgr
 
 
 class ConfMgr:
@@ -74,8 +74,8 @@ class ConfMgr:
             If the file content is not valid JSON.
         """
         try:
-            l_json_hdr = JsonHdr(_filepath)
-            l_config = l_json_hdr.read()
+            l_json_mgr = JsonMgr(_filepath)
+            l_config = l_json_mgr.read()
             return l_config
         except FileNotFoundError as e:
             raise FileNotFoundError(f"File '{_filepath}' not found") from e
