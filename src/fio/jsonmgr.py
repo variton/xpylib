@@ -6,7 +6,7 @@ This module provides a minimal JSON file reader and writer.
 import json
 
 
-class JsonHdr:
+class JsonMgr:
     r"""
     JSON file reader and writer.
 
@@ -22,11 +22,11 @@ class JsonHdr:
 
     Basic write + read round-trip::
 
-        from jsonhdr import JsonHdr
+        from jsonmgr import JsonMgr
 
-        hdr = JsonHdr("example.json")
-        hdr.write({"a": 1, "b": [1, 2, 3]})
-        data = hdr.read()
+        mgr = JsonMgr("example.json")
+        mgr.write({"a": 1, "b": [1, 2, 3]})
+        data = mgr.read()
 
         assert data["a"] == 1
         assert data["b"] == [1, 2, 3]
@@ -34,31 +34,31 @@ class JsonHdr:
     Handling invalid JSON (raises :class:`ValueError`)::
 
         # Suppose "broken.json" contains: { invalid json
-        from jsonhdr import JsonHdr
+        from jsonmgr import JsonMgr
 
-        hdr = JsonHdr("broken.json")
+        mgr = JsonMgr("broken.json")
         try:
-            hdr.read()
+            mgr.read()
         except ValueError as e:
             print("Invalid JSON:", e)
 
     Handling missing files (raises :class:`FileNotFoundError`)::
 
-        from jsonhdr import JsonHdr
+        from jsonmgr import JsonMgr
 
-        hdr = JsonHdr("does_not_exist.json")
+        mgr = JsonMgr("does_not_exist.json")
         try:
-            hdr.read()
+            mgr.read()
         except FileNotFoundError as e:
             print("Missing file:", e)
 
     Writing non-serializable objects (raises :class:`TypeError`)::
 
-        from jsonhdr import JsonHdr
+        from jsonmgr import JsonMgr
 
-        hdr = JsonHdr("out.json")
+        mgr = JsonMgr("out.json")
         try:
-            hdr.write({"bad": {1, 2, 3}})  # sets are not JSON-serializable
+            mgr.write({"bad": {1, 2, 3}})  # sets are not JSON-serializable
         except TypeError as e:
             print("Not serializable:", e)
     """
