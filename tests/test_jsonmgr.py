@@ -1,7 +1,6 @@
-import json
 import pytest
 
-from fio.jsonmgr import JsonMgr  # adjust import to your module name/path
+from fio.jsonmgr import JsonMgr
 
 
 def test_write_and_read_round_trip(tmp_path):
@@ -69,4 +68,4 @@ def test_write_creates_file(tmp_path):
 
     assert p.exists()
     # sanity check it is valid JSON
-    assert json.loads(p.read_text(encoding="utf-8")) == {"ok": True}
+    assert __import__('json').loads(p.read_text(encoding="utf-8")) == {"ok": True}
