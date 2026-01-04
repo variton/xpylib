@@ -24,6 +24,14 @@ from typehdr.strhdr import StrHdr
     ],
 )
 
+
+def test_detect_embedded_str(_s, expected):
+    assert StrHdr.detect_embedded_str(_s) is expected
+
+def test_detect_embedded_str_does_not_raise_on_empty():
+    # Implementation explicitly handles empty strings
+    assert StrHdr.detect_embedded_str("") is False
+
 @pytest.mark.parametrize(
     "input_s, expected",
     [
@@ -35,13 +43,6 @@ from typehdr.strhdr import StrHdr
         ("a\nb\r\nc\td", ["a", "b", "c", "d"]),                       # newline variants + tab
     ],
 )
-
-def test_detect_embedded_str(_s, expected):
-    assert StrHdr.detect_embedded_str(_s) is expected
-
-def test_detect_embedded_str_does_not_raise_on_empty():
-    # Implementation explicitly handles empty strings
-    assert StrHdr.detect_embedded_str("") is False
 
 def test_str_to_list_splits_on_whitespace(input_s: str, expected: list[str]) -> None:
     assert StrHdr.str_to_list(input_s) == expected
