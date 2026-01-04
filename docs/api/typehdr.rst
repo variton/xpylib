@@ -9,3 +9,4 @@ modules
 
    typehdr.listhdr
    typehdr.strhdr
+   typehdr.jsonhdr
