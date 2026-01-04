@@ -8,3 +8,4 @@ Packages
    typehdr
    config
    metric
+   fs
