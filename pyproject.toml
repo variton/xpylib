@@ -15,7 +15,8 @@ dependencies = ["black",
       "bandit",
       "sphinx",
       "furo",
-      "coverage"]
+      "coverage",
+      "multipledispatch"]
 
 [build-system]
 requires = ["setuptools", "wheel"]

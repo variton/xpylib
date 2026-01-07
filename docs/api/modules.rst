@@ -9,3 +9,4 @@ Packages
    config
    metric
    fs
+   cli
