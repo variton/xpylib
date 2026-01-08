@@ -12,7 +12,7 @@ from typehdr.jsonhdr import json_str_to_dict
 @dispatch(list)
 @json_str_to_dict
 def runc(_cmd: list[str]) -> object:
-    """
+    r"""
     Execute a command provided as a list of arguments.
 
     This overload expects the command to be supplied as a list of strings,
@@ -32,6 +32,22 @@ def runc(_cmd: list[str]) -> object:
 
     :raises subprocess.CalledProcessError: If the command exits with a
         non-zero status code.
+
+    *Examples*
+
+    .. code-block:: python
+
+        from clihdr import runc
+
+        # Execute a simple command using a list of arguments
+        output = runc(["echo", "hello"])
+        print(output)
+        # 'hello\\n'
+
+        # Execute a command that returns JSON output
+        result = runc(["echo", '{"status": "ok"}'])
+        print(result)
+        # {'status': 'ok'}
     """
     result = subprocess.run(
         _cmd,
@@ -46,7 +62,7 @@ def runc(_cmd: list[str]) -> object:
 @dispatch(str)
 @json_str_to_dict
 def runc(_cmd: str) -> object:  # noqa: F811
-    """
+    r"""
     Execute a command provided as a string.
 
     This overload accepts a single cmd string, which is split into arguments
@@ -69,6 +85,27 @@ def runc(_cmd: str) -> object:  # noqa: F811
 
     :raises subprocess.CalledProcessError: If the command exits with a
         non-zero status code.
+
+    *Examples*
+
+    .. code-block:: python
+
+        from clihdr import runc
+
+        # Execute a simple command as a string
+        output = runc("echo hello")
+        print(output)
+        # 'hello\\n'
+
+        # Preserve quoted arguments
+        output = runc('echo "hello world"')
+        print(output)
+        # 'hello world\\n'
+
+        # Automatically parse JSON output
+        result = runc('echo \'{"count": 3}\'')
+        print(result)
+        # {'count': 3}
     """
     _cmd = ListHdr.mutate(_cmd.split(), StrHdr.detect_embedded_str)
 
