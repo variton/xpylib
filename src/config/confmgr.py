@@ -63,7 +63,7 @@ class ConfMgr:
 
         Returns
         -------
-        Any
+        object
             The loaded configuration data.
 
         Raises
