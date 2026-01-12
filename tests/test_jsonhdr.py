@@ -78,5 +78,7 @@ def test_preserves_wrapped_function_name_via_wraps():
     @json_str_to_dict
     def original_name():
         return json.dumps({"ok": True})
-
+    
+    l_var = original_name()
     assert original_name.__name__ == "original_name"
+    assert l_var['ok'] == True
