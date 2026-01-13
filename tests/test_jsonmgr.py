@@ -1,7 +1,7 @@
 import pytest
 
 from fio.jsonmgr import JsonMgr
-
+from fs.fsmgr import FsMgr 
 
 def test_write_and_read_round_trip(tmp_path):
     p = tmp_path / "data.json"
@@ -69,3 +69,10 @@ def test_write_creates_file(tmp_path):
     assert p.exists()
     # sanity check it is valid JSON
     assert __import__('json').loads(p.read_text(encoding="utf-8")) == {"ok": True}
+
+def test_write_file_not_found():
+    mgr = JsonMgr("")
+    payload = {"ok": True}
+    
+    with pytest.raises(FileNotFoundError):
+        mgr.write(payload)
