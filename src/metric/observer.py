@@ -3,7 +3,7 @@
 from functools import wraps
 
 
-def measure(func):
+def measure(func: callable) -> callable:
     """
     Measure the execution time of a function.
 
@@ -20,7 +20,7 @@ def measure(func):
     .. code-block:: python
 
         @measure
-        def slow_add(a, b):
+        def slow_add(a, b) -> int:
             return a + b
 
         result = slow_add(2, 3)
